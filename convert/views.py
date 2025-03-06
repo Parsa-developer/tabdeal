@@ -10,7 +10,7 @@ class ConvertView(APIView):
     def post(self, request):
         num = request.data.get('number')
         to = request.data.get('to')
-        if to == "gram":
+        if to == "kilogram":
             num = int(num) / 1000
             return Response({
                 'success': num
