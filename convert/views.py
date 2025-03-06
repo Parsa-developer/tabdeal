@@ -9,12 +9,12 @@ class ConvertView(APIView):
         num = request.data.get('number')
         to = request.data.get('to')
         if to == "kilogram":
-            num = int(num) / 1000
+            num = float(num) / 1000
             return Response({
                 'success': num
             })
         elif to == "miligram":
-            num = int(num) * 1000000
+            num = float(num) * 1000000
             return Response({
                 'success': num
             })
