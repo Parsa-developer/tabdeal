@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from .models import Convert
-from .serializer import ConvertSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
