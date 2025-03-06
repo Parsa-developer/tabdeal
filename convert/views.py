@@ -16,7 +16,7 @@ class ConvertView(APIView):
                 'success': num
             })
         elif to == "miligram":
-            num = int(num) / 1000000
+            num = int(num) * 1000000
             return Response({
                 'success': num
             })
