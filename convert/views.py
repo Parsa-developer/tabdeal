@@ -13,8 +13,13 @@ class ConvertView(APIView):
             return Response({
                 'success': num
             })
-        elif to == "miligram":
+        elif to == "microgram":
             num = float(num) * 1000000
+            return Response({
+                'success': num
+            })
+        elif to == "miligram":
+            num = float(num) * 1000
             return Response({
                 'success': num
             })
